@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои Хобби</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F5F5DC; 
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #4B0082; 
+        }
+        .info, .hobbies {
+            padding: 20px;
+            margin: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4B0082; 
+            padding: 10px;
+        }
+        nav a {
+            color: #FFFAFA; 
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #FFD700; 
+        }
+        nav a:visited {
+            color: #8A2BE2; 
+        }
+        .first-letter::first-letter {
+            color: #4B0082;
+            font-size: 200%;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4B0082;
+            color: #FFFAFA; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">О себе</a>
+        <a href="#hobbies">Мои хобби</a>
+    </nav>
+    <main>
+        <section id="about" class="info">
+            <h1>Мои Хобби</h1>
+            <div class="first-letter">
+                <p>Привет! Меня зовут Андрей. Мне нравится заниматься волейболом и играть на гитаре.</p>
+            </div>
+        </section>
+        <section id="hobbies" class="hobbies">
+            <h2>Мои хобби</h2>
+            <ul>
+                <li>
+                    <img src="volleyball.jpg" alt="Волейбол">
+                    <div>
+                        <h3>Волейбол</h3>
+                        <p>Волейболом я занимаюсь с 9-го класса. Этот вид спорта мне нравится, так как он очень командный и быстрый по своему стилю</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="guitar.jpg" alt="Игра на гитаре">
+                    <div>
+                        <h3>Игра на гитаре</h3>
+                        <p>Игра на гитаре помогает мне расслабиться + могу своим друзьям сыграть Макса Коржа))
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Мои Хобби. Все права защищены.</p>
+    </footer>
+</body>
+</html>
