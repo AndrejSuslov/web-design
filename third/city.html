@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой город</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            background-color: #0073e6;
+            color: #fff;
+        }
+        h1 {
+            margin-left: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .photo-container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%; 
+        }
+        .photo-container figure {
+            margin: 0; 
+            text-align: center; 
+        }
+        .photo-container img {
+            max-width: 40%; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Мой город</h2>
+    </header>
+    <section id="history">
+        <h2>История города</h2>
+        <p>Пе́триков <B>(бел. Петрыкаў)</B> — город в Гомельской области Республики Беларусь. Административный центр Петриковского района.
+            Численность населения — 10 303 человек (на 1 января 2023 года).
+            В 2023 году Петриков отметил <b>500-летие</b></p>
+    </section>
+    <section id="attractions">
+        <h2>Достопримечательности</h2>
+        <div class="photo-container">
+            <figure>
+                <img src="Nikolay_church.jpg", width="400", height="400">
+                <figcaption>Церковь святого Николая</figcaption>
+            </figure>
+            <figure>
+                <img src="Pripyac.jfif", width ="500", height="400">
+                <figcaption>Река Припять</figcaption>
+            </figure>
+            <figure>
+                <img src="memorial.jpg", width ="500", height="400">
+                <figcaption>Мемориал в честь воинов-освободителей Петрикова</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section id="symbols">
+        <h2>Символы города</h2>
+        <p>Непременными атрибутами, которые сопровождают все изображения этого апостола, являются два ключа, серебряный и золотой. Они, вместе с тем, являются символом закрытого, укрепленного города. Передача ключа от осажденного города врагам была выражением капитуляции перед завоевателем.</p>
+        <div class="photo-container">
+            <figure>
+                <img src="symbol.png" alt="Фото 1", width="400", height="400">
+                <figcaption>Герб</figcaption>
+            </figure>
+            <figure>
+                <img src="flag.png" alt="Фото 2", width ="500", height="400">
+                <figcaption>Флаг</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section id="map">
+        <h2>Расположение на карте</h2>
+        <img src="map.png" alt="Карта города">
+    </section>
+    <section id="news">
+        <h2>Новости</h2>
+        <p>В рамках акции <b>«С заботой о безопасности малой родины»</b> работники Петриковского районного отдела по чрезвычайным ситуациям посетили малые населенные пункты, проезжая по маршруту следования автолавки.
+        </p>
+        <img src="dead.jpg", width="300", height="400">
+    </section>
+    <section id="current">
+        <h2>Город сейчас</h2>
+        <p>В Петриков имеется:
+            <ul>
+                <li>Судоремонтный завод</li>
+                <li>Заводы керамзитового гравия</li>
+                <li>Хлебозавод</li>
+                <li>Рудник по добыче калийной руды</li>
+                <li>Государственное лесохозяйственное учреждение "Петриковский лесхоз"</li>
+            </ul>
+        </p>
+    </section>
+    <section id="extra">
+        <h2>Информация на своё усмотрение</h2>
+        <div class="photo-container">
+            <figure>
+                <img src="park.jpg", width="400", height="400">
+                <figcaption>Парк культуры i адпачынку</figcaption>
+            </figure>
+        </div>
+    </section>
+</body>
+</html>

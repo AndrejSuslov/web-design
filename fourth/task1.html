@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сравнение автомобилей</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            caption-side: top;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        mark {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Сравнение характеристик автомобилей</caption>
+        <thead>
+            <tr>
+                <th>Марка</th>
+                <th>Самая дорогая модель</th>
+                <th>Самая дешёвая модель</th>
+                <th>Двигатель</th>
+                <th>Расход топлива</th>
+                <th>Скорость</th>
+                <th>Экологические сертификаты</th>
+                <th>Гарантийный срок</th>
+                <th>Максимальная скорость</th>
+                <th>Тип</th>
+                <th>Количество передач</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <details>
+                        <summary>Lamborghini</summary>
+                        <p>Производитель: Италия</p>
+                    </details>
+                </td>
+                <td><mark>Aventador</mark></td>
+                <td>Huracan</td>
+                <td>V12</td>
+                <td>15 л/100 км</td>
+                <td>350 км/ч</td>
+                <td>Да</td>
+                <td>3 года</td>
+                <td>350 км/ч</td>
+                <td>Автоматическая</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>
+                    <details>
+                        <summary>Voyah</summary>
+                        <p>Производитель: Китай</p>
+                    </details>
+                </td>
+                <td><mark>Free</mark></td>
+                <td>i-Land</td>
+                <td>Электродвигатель</td>
+                <td>7 л/100 км</td>
+                <td>200 км/ч</td>
+                <td>Да</td>
+                <td>5 лет</td>
+                <td>200 км/ч</td>
+                <td>Автоматическая</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>
+                    <details>
+                        <summary>Jaguar</summary>
+                        <p>Производитель: Великобритания</p>
+                    </details>
+                </td>
+                <td><mark>F-Type</mark></td>
+                <td>XE</td>
+                <td>V8</td>
+                <td>10 л/100 км</td>
+                <td>300 км/ч</td>
+                <td>Да</td>
+                <td>3 года</td>
+                <td>300 км/ч</td>
+                <td>Автоматическая</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="11">Источник информации: Официальные сайты производителей</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

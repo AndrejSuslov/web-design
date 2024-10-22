@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Пример веб-страницы">
+    <meta name="keywords" content="HTML, пример, веб-страница">
+    <meta name="author" content="Ваше Имя">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The title of web-site</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Привет, мир!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Заголовок веб-страницы</h1>
+
+    <table>
+        <tr>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Группа</th>
+        </tr>
+        <tr>
+            <td>Колесинский</td>
+            <td>Максим</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Ритвинский</td>
+            <td>Евгений</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Жигунов</td>
+            <td>Егор</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Пономаренко</td>
+            <td>Владислав</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Суслов</td>
+            <td>Андрей</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h2>Пронумерованный список</h2>
+    <ol>
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+    </ol>
+
+    <h2>Непронумерованный список</h2>
+    <ul>
+        <li>Элемент A</li>
+        <li>Элемент B</li>
+        <li>Элемент C</li>
+    </ul>
+
+    <h2>Форма</h2>
+    <form action="/submit" method="post">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Отправить">
+    </form>
+
+    <button onclick="showAlert()">Нажми меня</button>
+</body>
+</html>
