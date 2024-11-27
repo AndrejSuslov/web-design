@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Layout</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    display: grid;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "wide-block full-width ."
+      "bottom-block bottom-block ."
+      "large-block . ."
+      ". . footer";
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto 1fr auto; 
+    gap: 20px; 
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .grid-item {
+    background-color: #ccc;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    display: grid;
+    place-items: center; 
+    padding: 20px;
+  }
+
+  .wide-block {
+    grid-area: wide-block;
+    background-color: #6BCB77;
+  }
+  .full-width {
+    grid-area: full-width;
+    background-color: #FFD93D;
+  }
+  .bottom-block {
+    grid-area: bottom-block;
+    background-color: #FF9F1C;
+  }
+  .large-block {
+    grid-area: large-block;
+    background-color: #FFB6B9;
+    grid-column: span 2; 
+    justify-self: start; 
+    max-width: calc(100% - 50px); 
+  }
+  .footer {
+    grid-area: footer;
+    background-color: #4D96FF;
+    align-self: end; 
+    justify-self: end; 
+  }
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item wide-block">Широкий блок</div>
+  <div class="grid-item full-width">Во всю ширину</div>
+  <div class="grid-item bottom-block">Нижний блок</div>
+  <div class="grid-item large-block">Большой блок</div>
+  <div class="grid-item footer">Футер</div>
+</div>
+</body>
+</html>
