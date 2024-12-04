@@ -1,58 +1,73 @@
-HTML-код страницы для раскрашивания
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа: Селекторы CSS</title>
+    <title>Школа IT-специалистов</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="main-title">Красный</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#" class="link">Зеленый</a></li>
-                <li><a href="#" class="link special-link">Синий</a></li>
-                <li><a href="#" class="link special-link-2">Желтый</a></li>
-            </ul>
+    <header class="header">
+        <div class="header-logo">
+            <h1>ШКОЛА IT</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="#" class="login-button">Войти</a>
+            <a href="#" class="register-button">Регистрация</a>
         </nav>
     </header>
-    
-    <section class="content">
-        <article class="post" id="first-post">
-            <h2>Пост 1: Оранжевый</h2>
-            <p>Этот блок текста должен стать оранжевым.</p>
-        </article>
-        
-        <article class="post">
-            <h2>Пост 2: Фиолетовый</h2>
-            <p>Этот блок текста должен стать фиолетовым.</p>
-        </article>
+
+    <main class="main-section">
+        <div class="intro">
+            <h2>Освой IT-Профессию с Нуля до Эксперта</h2>
+            <p class="intro-text">Наш образовательный проект поможет тебе стать востребованным IT-специалистом! Реальные проекты, практические задания и поддержка менторов.</p>
+            <p class="prize-info">СТИПЕНДИИ И ПРИЗОВОЙ ФОНД БОЛЕЕ <span class="highlight">10 ТЫС РУБЛЕЙ</span></p>
+            <a href="#" class="join-button">Присоединиться</a>
+        </div>
+    </main>
+
+    <section class="carousel">
+        <div class="carousel-blur carousel-blur-left"></div>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="card">
+                    <img src="photo1.jpg" alt="Картинка 1">
+                    <h3>Разработка сайтов</h3>
+                    <p>Научитесь создавать современные веб-сайты, используя HTML, CSS и JavaScript.</p>
+                </div>
+                <div class="card">
+                    <img src="photo2.jpg" alt="Картинка 2">
+                    <h3>Мобильная разработка</h3>
+                    <p>Изучите создание приложений для iOS и Android с использованием современных технологий.</p>
+                </div>
+                <div class="card">
+                    <img src="photo3.jpg" alt="Картинка 3">
+                    <h3>Data Science</h3>
+                    <p>Изучите анализ данных и машинное обучение с использованием Python и R.</p>
+                </div>
+                <div class="card">
+                    <img src="photo4.jpg" alt="Картинка 4">
+                    <h3>Кибербезопасность</h3>
+                    <p>Овладейте навыками защиты от кибератак и обеспечьте безопасность информационных систем.</p>
+                </div>
+                <div class="card">
+                    <img src="photo5.jpg" alt="Картинка 5">
+                    <h3>Тестирование ПО</h3>
+                    <p>Освойте методы тестирования программного обеспечения и сделайте системы надежными.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-blur carousel-blur-right"></div>
     </section>
 
-    <section class="sidebar">
-        <div class="widget">
-            <h3>Розовый</h3>
-            <ul class="color-list">
-                <li>Цвет: Серый</li>
-                <li>Цвет: Коричневый</li>
-                <li class="highlighted">Цвет: Черный</li>
-            </ul>
-        </div>
+    <div class="carousel-button-container">
+        <a href="#" class="carousel-button">Подробнее</a>
+    </div>
 
-        <div class="widget important-widget">
-            <h3>Бордовый</h3>
-            <p class="note">Этот текст должен стать бордовым.</p>
-        </div>
-    </section>
-
-    <footer>
-        <form action="#" class="form">
-            <label for="name">Введите имя:</label>
-            <input type="text" id="name" placeholder="Белый">
-            <button type="submit" class="submit-btn">Черный</button>
-        </form>
+    <footer class="footer">
+        <p>Первый бесплатный образовательный проект для будущих IT-специалистов</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
