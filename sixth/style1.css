@@ -220,3 +220,75 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header-nav {
+        margin-top: 10px;
+    }
+
+    .main-section {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .intro {
+        max-width: 100%;
+    }
+
+    .carousel-track {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .advantages h2, 
+    .technologies h2 {
+        font-size: 1.5rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .carousel-track {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carousel-container {
+        overflow: hidden; 
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease; 
+    }
+
+    .card {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+}
+
