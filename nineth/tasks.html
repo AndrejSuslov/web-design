@@ -50,105 +50,120 @@
         <h2>Task 1</h2>
         <pre class="code">function sumThree (a, b, c) {
     return a + b + c;
-}</pre>
+}
+console.log(sumThree(1, 2, 3));</pre>
         <div class="output">Output: 6</div>
     </div>
     <div class="task">
         <h2>Task 2</h2>
         <pre class="code">function isNegative(num) {
     return num < 0;
-}</pre>
+}
+console.log(isNegative(-8));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 3</h2>
         <pre class="code">function multiply(a, b) {
     return a * b;
-}</pre>
+}
+console.log(multiply(4, 7723));</pre>
         <div class="output">Output: 30892</div>
     </div>
     <div class="task">
         <h2>Task 4</h2>
         <pre class="code">function isInteger(a) {
     return Number.isInteger(a);
-}</pre>
+}
+console.log(isInteger("Integer"));</pre>
         <div class="output">Output: false</div>
     </div>
     <div class="task">
         <h2>Task 5</h2>
         <pre class="code">function percentage(total, percent) {
     return percent * 100 / total;
-}</pre>
+}
+console.log(percentage(1238429, 382244));</pre>
         <div class="output">Output: 30.86617685383248</div>
     </div>
     <div class="task">
         <h2>Task 6</h2>
         <pre class="code">function lastChar(str) {
     return str.slice(-1);
-}</pre>
+}
+console.log(lastChar("qwertyui"));</pre>
         <div class="output">Output: i</div>
     </div>
     <div class="task">
         <h2>Task 7</h2>
         <pre class="code">function toLower(str) {   
     return str.toLowerCase();
-}</pre>
+}
+console.log(toLower("QWERTYUIO"));</pre>
         <div class="output">Output: qwertyuio</div>
     </div>
     <div class="task">
         <h2>Task 8</h2>
         <pre class="code">function contains(str, subStr) {
     return str.includes(subStr);
-}</pre>
+}
+console.log(contains("qwertyuio", "ert"));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 9</h2>
         <pre class="code">function repeatTwice(str) {
     return str + str;
-}</pre>
+}
+console.log(repeatTwice("QWERT_Y"));</pre>
         <div class="output">Output: QWERT_YQWERT_Y</div>
     </div>
     <div class="task">
         <h2>Task 10</h2>
         <pre class="code">function trimSpaces(str) {
     return str.trim();
-}</pre>
+}
+console.log(trimSpaces("     QWERTYUIO     "));</pre>
         <div class="output">Output: QWERTYUIO</div>
     </div>
     <div class="task">
         <h2>Task 11</h2>
         <pre class="code">function andNot(a, b) {
     return a && !b;
-}</pre>
+}
+console.log(andNot(true, false));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 12</h2>
         <pre class="code">function isTrue(value) {
     return value;
-}</pre>
+}
+console.log(isTrue(true));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 13</h2>
         <pre class="code">function isSame(a, b) {
     return a === b;
-}</pre>
+}
+console.log(isSame(12, 12));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 14</h2>
         <pre class="code">function xor(a, b) {
     return (a || b) && !(a && b); 
-}</pre>
+}
+console.log(xor(true, false));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 15</h2>
         <pre class="code">function toggle(value) {
     return !value;
-}</pre>
+}
+console.log(toggle(false));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
@@ -161,12 +176,14 @@
 
 function hasKey(obj, key) {
     return obj.hasOwnProperty(key);
-}</pre>
+}
+console.log(hasKey(obj, 'a'));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 17</h2>
-        <pre class="code">function getKeys(obj) { return Object.keys(obj).join(', '); }</pre>
+        <pre class="code">function getKeys(obj) { return Object.keys(obj).join(', '); }
+console.log(getKeys(obj));</pre>
         <div class="output">Output: a, b, c</div>
     </div>
     <div class="task">
@@ -181,7 +198,7 @@ function isEqual(obj1, obj2) {
         return true;
     }
 
-    if (obj1 == null || typeof obj1 !== 'object' || obj2 == null || typeof obj2 !== 'object') {
+    if (obj1 == null || obj2 == null) {
         return false;
     }
 
@@ -200,18 +217,21 @@ function isEqual(obj1, obj2) {
 
     return true;
 }
-</pre>
+
+console.log(isEqual(obj, obj2));</pre>
         <div class="output">Output: false</div>
     </div>
     <div class="task">
         <h2>Task 19</h2>
         <pre class="code">function removeKey(obj, key) { delete obj[key]; }
-removeKey(obj, 'a');</pre>
+removeKey(obj, 'a');
+console.log(obj);</pre>
         <div class="output">Output: { b: 2, c: 3 }</div>
     </div>
     <div class="task">
         <h2>Task 20</h2>
-        <pre class="code">function isValueEqual(obj, key, value) { return obj[key] === value; }</pre>
+        <pre class="code">function isValueEqual(obj, key, value) { return obj[key] === value; }
+console.log(isValueEqual(obj, 'b', 2));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
@@ -223,21 +243,24 @@ for (let i = start; i <= end; i++) {
 } 
     return array;
 }
-var array1 = createArray(1, 10);</pre>
+var array1 = createArray(1, 10);
+console.log(array1);</pre>
         <div class="output">Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</div>
     </div>
     <div class="task">
         <h2>Task 22</h2>
         <pre class="code">function contains(array, element) {
     return array.includes(element);
-}</pre>
+}
+console.log(contains(array1, 7));</pre>
         <div class="output">Output: true</div>
     </div>
     <div class="task">
         <h2>Task 23</h2>
         <pre class="code">function getLength(array) {
     return array.length;
-}</pre>
+}
+console.log(getLength(array1));</pre>
         <div class="output">Output: 10</div>
     </div>
     <div class="task">
@@ -246,14 +269,16 @@ var array1 = createArray(1, 10);</pre>
     array.push(element);
     return array;
 }
-addToEnd(array1, 11);</pre>
+addToEnd(array1, 11);
+console.log(array1);</pre>
         <div class="output">Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</div>
     </div>
     <div class="task">
         <h2>Task 25</h2>
         <pre class="code">function getLastElement(array) {
     return array[array.length - 1];
-}</pre>
+}
+console.log(getLastElement(array1));</pre>
         <div class="output">Output: 11</div>
     </div>
     <div class="task">
@@ -272,15 +297,17 @@ logElements(array1);</pre>
     let sum = 0;
     array.forEach(num => { sum += num; });
     return sum;
-}</pre>
-        <div class="output: Output: 66 </div>
+}
+console.log(sumArray(array1));</pre>
+        <div class="output: Output: 66</div>
         </div>
         <div class="task">
             <h2>Task 28</h2>
             <pre class="code">var array2 = ["qwert", "asdfg", "zxcvb"];
     function toUpperCase(array) {
         return array.map(str => str.toUpperCase());
-    }</pre>
+    }
+    console.log(toUpperCase(array2));</pre>
             <div class="output">Output: ["QWERT", "ASDFG", "ZXCVB"]</div>
         </div>
         <div class="task">
@@ -288,7 +315,8 @@ logElements(array1);</pre>
             <pre class="code">var array3 = [1, 2, -3, -4, 5, 6, -7, -8, 9, -10];
     function countNegatives(array) {
         return array.filter(num => num < 0).length;
-    }</pre>
+    }
+    console.log(countNegatives(array3));</pre>
             <div class="output">Output: 5</div>
         </div>
         <div class="task">
@@ -303,35 +331,40 @@ logElements(array1);</pre>
             <h2>Task 31</h2>
             <pre class="code">function squareNumbers(array) {
         return array.map(num => num * num);
-    }</pre>
+    }
+    console.log(squareNumbers(array3));</pre>
             <div class="output">Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</div>
         </div>
         <div class="task">
             <h2>Task 32</h2>
             <pre class="code">function doubleElements(array) {
         return array.map(num => num * 2);
-    }</pre>
+    }
+    console.log(doubleElements(array3));</pre>
             <div class="output">Output: [2, 4, -6, -8, 10, 12, -14, -16, 18, -20]</div>
         </div>
         <div class="task">
             <h2>Task 33</h2>
             <pre class="code">function getFirstLetters(array) {
         return array.map(str => str.charAt(0));
-    }</pre>
+    }
+    console.log(getFirstLetters(array2));</pre>
             <div class="output">Output: ["q", "a", "z"]</div>
         </div>
         <div class="task">
             <h2>Task 34</h2>
             <pre class="code">function addPrefix(array, prefix) {
         return array.map(str => prefix + str);
-    }</pre>
+    }
+    console.log(addPrefix(array2, "PRE_"));</pre>
             <div class="output">Output: ["PRE_qwert", "PRE_asdfg", "PRE_zxcvb"]</div>
         </div>
         <div class="task">
             <h2>Task 35</h2>
             <pre class="code">function numbersToStrings(array) {
         return array.map(num => num.toString());
-    }</pre>
+    }
+    console.log(numbersToStrings(array3));</pre>
             <div class="output">Output: ["1", "2", "-3", "-4", "5", "6", "-7", "-8", "9", "-10"]</div>
         </div>
     </body>
