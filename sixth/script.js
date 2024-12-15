@@ -47,4 +47,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     cards.forEach(card => observer.observe(card));
+
+    // Handle swipe functionality for carousel on mobile devices
+    let startX = 0;
+    let isDragging = false;
+
+    track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    track.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const touchX = e.touches[0].clientX;
+        const deltaX = touchX - startX;
+
+        if (deltaX > 50) {
+            isDragging = false; 
+        } else if (deltaX < -50) {
+            isDragging = false; 
+        }
+    });
+
+    track.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    // Handle resize for responsiveness
+    window.addEventListener('resize', () => {
+        const cardWidth = track.firstElementChild.offsetWidth + 30;
+        track.style.transform = `translateX(0px)`;
+    });
 });

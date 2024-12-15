@@ -221,74 +221,46 @@ body {
     transform: translateY(0);
 }
 
-@media (max-width: 1024px) {
-    .header {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
+@media (max-width: 768px) {
+    .carousel-container {
+        overflow-x: scroll; /* Включаем горизонтальный скролл для маленьких экранов */
+        scrollbar-width: none; /* Скрыть полосу прокрутки в поддерживаемых браузерах */
     }
 
-    .header-nav {
-        margin-top: 10px;
+    .carousel-container::-webkit-scrollbar {
+        display: none; /* Скрыть полосу прокрутки в WebKit */
+    }
+
+    .card {
+        width: 250px; /* Уменьшаем размер карточек */
+        margin: 0 10px; /* Уменьшаем отступы между карточками */
     }
 
     .main-section {
-        height: auto;
-        padding: 20px;
-        text-align: center;
+        height: 70vh; /* Уменьшаем высоту главного секции */
     }
 
     .intro {
-        max-width: 100%;
+        padding: 10px; /* Сокращаем внутренний отступ */
+        max-width: 90%; /* Увеличиваем ширину на маленьких экранах */
     }
 
-    .carousel-track {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .card {
-        width: 90%;
-        margin: 10px auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 1.2rem;
-    }
-
-    .button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    .advantages h2, 
-    .technologies h2 {
-        font-size: 1.5rem;
+    .advantages h2, .technologies h2 {
+        font-size: 1.5rem; /* Уменьшаем заголовки */
     }
 
     .grid-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .carousel-track {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .carousel-container {
-        overflow: hidden; 
-    }
-
-    .carousel-track {
-        display: flex;
-        transition: transform 0.5s ease; 
-    }
-
-    .card {
-        flex: 0 0 100%;
-        margin: 0;
+        grid-template-columns: 1fr; /* Одноколоночный вид на маленьких экранах */
     }
 }
 
+@media (max-width: 480px) {
+    .card {
+        width: 200px; /* Еще меньший размер карточек */
+    }
+
+    .button {
+        padding: 10px 20px; /* Уменьшаем размер кнопок */
+        font-size: 1rem; /* Снижаем размер текста */
+    }
+}
