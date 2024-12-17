@@ -107,3 +107,37 @@ li.completed {
 .task-buttons button:hover {
     background-color: #c9302c;
 }
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters button, .filters select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #ddd;
+}
+.filters button {
+    color: black;
+    background-color: white;
+    border: 1px solid #ddd; 
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filters button:hover {
+    background-color: #f0f0f0; 
+}

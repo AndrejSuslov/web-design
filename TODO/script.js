@@ -6,8 +6,22 @@ const prioritySelect = document.getElementById("priority");
 const taskDate = document.getElementById("taskDate");
 const taskTime = document.getElementById("taskTime");
 const taskList = document.getElementById("taskList");
+const filterButtons = document.querySelectorAll(".filters button");
+const priorityFilter = document.getElementById("priorityFilter");
 
 addTaskBtn.addEventListener("click", addTask);
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+        applyFilter(filter, priorityFilter.value);
+    });
+});
+
+priorityFilter.addEventListener("change", () => {
+    const activeFilter = document.querySelector(".filters button.active")?.getAttribute("data-filter") || "all";
+    applyFilter(activeFilter, priorityFilter.value);
+});
 
 function addTask() {
     const taskText = taskInput.value.trim();
@@ -102,4 +116,22 @@ function clearInputs() {
     taskInput.value = "";
     taskDate.value = "";
     taskTime.value = "";
+}
+
+function applyFilter(statusFilter, priorityFilterValue) {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    let filteredTasks = tasks;
+
+    if (statusFilter === "completed") {
+        filteredTasks = tasks.filter(task => task.completed);
+    } else if (statusFilter === "incomplete") {
+        filteredTasks = tasks.filter(task => !task.completed);
+    }
+
+    if (priorityFilterValue !== "all") {
+        filteredTasks = filteredTasks.filter(task => task.priority === priorityFilterValue);
+    }
+
+    taskList.innerHTML = "";
+    filteredTasks.forEach(renderTask);
 }
