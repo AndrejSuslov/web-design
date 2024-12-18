@@ -194,14 +194,11 @@
                 });
 
                 if (response.ok) {
-                    // Очищаем форму
                     this.reset();
                     
-                    // Показываем сообщение об успехе
                     const successMessage = document.getElementById('success-message');
                     successMessage.style.display = 'block';
                     
-                    // Скрываем сообщение через 3 секунды
                     setTimeout(() => {
                         successMessage.style.display = 'none';
                     }, 3000);
