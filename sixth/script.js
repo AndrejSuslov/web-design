@@ -1,5 +1,16 @@
 const track = document.querySelector('.carousel-track');
 
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const burgerIcon = document.querySelector('.burger-icon');
+    const nav = document.querySelector('.header-nav');
+
+    burgerMenu.addEventListener('click', function() {
+        burgerIcon.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+});
+
 function setupInfiniteScroll() {
     const cards = Array.from(track.children);
     const fullArray = [...cards, ...cards]; 
